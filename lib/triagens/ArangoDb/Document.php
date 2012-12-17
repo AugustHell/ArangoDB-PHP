@@ -209,6 +209,9 @@ class Document {
 
     // and store the value
     $this->_values[$key] = $value;
+    
+    // return the document to allow chaining of multiple sets like $this->set("name","Adam")->set("girlfriend","Eva")
+    return $this;
   }
   
   /**
